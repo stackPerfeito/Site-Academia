@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Academia</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="detalhes.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="imagens/17504043-emblema-de-musculacao-e-modelo-de-de-design-de-logotipo-de-academia-vetor.jpg" alt="Logo">
+        </div>
+        <h1>Atividades Físicas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Locais</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="message text-center">
+    <p>Verifique se esta academia é parceira da nossa rede. Se sim, você pode aproveitar benefícios especiais!</p>
+    <button id="verificarParceira" class="btn btn-primary">Verificar Academia Parceira</button>
+</div>
+
+<div class="container-main mt-4">
+    <div id="detalhes-academia" class="card"></div>
+</div>
+
+<div class="popup-container" id="popupContainer"></div>
+
+<script>
+    // Extrair o ID da academia da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const academiaId = urlParams.get('id');
+
+    // Array de objetos contendo detalhes de cada academia
+    const academias = [
+        {
+            id: 1,
+            nome: "Santo Amaro",
+            endereco: "R. da Glória, 123, Recife - PE",
+            preco: "R$ 150,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Santo Amaro.jpg"
+        },
+        {
+            id: 2,
+            nome: "Recife",
+            endereco: "Av. Boa Viagem, 456, Recife - PE",
+            preco: "R$ 130,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Recife.jpg"
+        },
+        {
+            id: 3,
+            nome: "Life",
+            endereco: "R. das Flores, 789, Recife - PE",
+            preco: "R$ 150,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Life.jpeg",
+            parceira: true,
+            desconto: 10
+        },
+        {
+            id: 4,
+            nome: "Vox",
+            endereco: "Av. Domingos Ferreira, 101, Recife - PE",
+            preco: "R$ 150,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Vox.jpeg",
+            parceira: true,
+            desconto: 20
+        },
+        {
+            id: 5,
+            nome: "Torre",
+            endereco: "R. das Palmeiras, 202, Recife - PE",
+            preco: "R$ 150,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Torre.jpg"
+        },
+        {
+            id: 6,
+            nome: "Havana",
+            endereco: "Av. Conselheiro Aguiar, 303, Recife - PE",
+            preco: "R$ 150,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Havana.jpg",
+            parceira: true,
+            desconto: 30
+        },
+        {
+            id: 7,
+            nome: "Água Fria",
+            endereco: "R. Amaro Bezerra, 404, Recife - PE",
+            preco: "R$ 150,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Agua Fria.jpg"
+        },
+        {
+            id: 8,
+            nome: "Fitner",
+            endereco: "Av. Rui Barbosa, 505, Recife - PE",
+            preco: "R$ 150,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Fither.jpg",
+            parceira: true,
+            desconto: 15
+        },
+        {
+            id: 9,
+            nome: "Smart Fit",
+            endereco: "R. do Príncipe, 606, Recife - PE",
+            preco: "R$ 150,00/mês",
+            avaliacao: "&#9733; &#9733; &#9733; &#9733; &#9734;",
+            imagem: "imagens/Smart.png",
+            parceira: true,
+            desconto: 25
+        }
+    ];
+
+   // Encontrar a academia correspondente ao ID fornecido
+   const academia = academias.find(academia => academia.id == academiaId);
+
+    // Verificar se a academia foi encontrada
+    const detalhesAcademiaDiv = document.getElementById('detalhes-academia');
+    if (academia) {
+        // Exibir os detalhes da academia na página
+        detalhesAcademiaDiv.innerHTML = `
+            <img src="${academia.imagem}" class="card-img-top" alt="${academia.nome}">
+            <div class="card-body">
+                <h2 class="card-title text-center">${academia.nome}</h2>
+                <p class="card-text"><strong>Endereço:</strong> ${academia.endereco}</p>
+                <p class="card-text"><strong>Preço:</strong> ${academia.preco}</p>
+                <p class="card-text"><strong>Avaliação:</strong> ${academia.avaliacao}</p>
+            </div>
+        `;
+    } else {
+        // Se a academia não for encontrada, exibir uma mensagem de erro
+        detalhesAcademiaDiv.innerHTML = `<p>Academia não encontrada.</p>`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Evento de clique no botão de verificação
+        document.getElementById('verificarParceira').addEventListener('click', () => {
+            // Verificar se a academia é parceira
+            if (academia && academia.parceira) {
+                // Se a academia for parceira, gerar os links
+                const linkCopiar = `https://www.academiaexemplo.com.br/inscricao?codigo=${academia.id}`;
+                const linkDirecionar = `https://www.academiaexemplo.com.br`;
+                
+                // Calcular o desconto baseado na academia
+                let descontoMsg = '';
+                if (academia.desconto) {
+                    descontoMsg = `Você terá um desconto de ${academia.desconto}% ao se inscrever!`;
+                } else {
+                    descontoMsg = 'Infelizmente, não há desconto disponível para esta academia.';
+                }
+
+                // Exibir os links em um popup com mensagem de desconto
+                const popupContent = `
+                    <p>Esta academia é parceira!</p>
+                    <p>${descontoMsg}</p>
+                    <p>Copie este link e use durante a inscrição:</p>
+                    <input type="text" value="${linkCopiar}" readonly>
+                    <a href="${linkDirecionar}" target="_blank">Ir para o site da academia</a>
+                `;
+                openPopup(popupContent);
+            } else {
+                // Se a academia não for parceira, exibir mensagem de erro
+                alert('Esta academia não é parceira da nossa rede.');
+            }
+        });
+    });
+
+    // Função para abrir um popup com o conteúdo fornecido
+    function openPopup(content) {
+        const popupContainer = document.getElementById('popupContainer');
+        popupContainer.innerHTML = `
+            <div class="popup">
+                <span class="close" onclick="closePopup()">&times;</span>
+                ${content}
+            </div>
+        `;
+        popupContainer.style.display = 'flex';
+    }
+
+    // Função para fechar o popup
+    function closePopup() {
+        const popupContainer = document.getElementById('popupContainer');
+        popupContainer.innerHTML = '';
+        popupContainer.style.display = 'none';
+    }
+
+</script>
+
+<footer>
+    <p>&copy; 2024 SeuNome. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

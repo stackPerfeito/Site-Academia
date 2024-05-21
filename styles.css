@@ -1,0 +1,308 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Cor de fundo do site */
+}
+
+/* Animações básicas */
+@keyframes hover-grow {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes hover-shrink {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+}
+
+@keyframes hover-fade-in {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+@keyframes hover-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0.7; }
+}
+
+/* Aplicar animações */
+.hover-animate {
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.hover-animate-grow:hover {
+    animation-name: hover-grow;
+}
+
+.hover-animate-shrink:hover {
+    animation-name: hover-shrink;
+}
+
+.hover-animate-fade:hover {
+    animation-name: hover-fade-in;
+}
+
+header {
+    background-color: #ffa500; /* Laranja suave para o header */
+    color: #fff; /* Texto branco para o header */
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    border-radius: 30px;
+    max-height: 100px; /* Ajuste conforme necessário */
+}
+
+h1 {
+    text-align: center;
+    color: #fff; /* Texto branco para o título */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alteração para exibir o menu na horizontal */
+}
+
+nav ul li {
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item */
+}
+
+nav ul li a {
+    color: #fff; /* Texto branco para os links do menu */
+    text-decoration: none;
+}
+
+/* Animação para mudar a cor dos links */
+@keyframes hover-color-change {
+    from { color: #fff; }
+    to { color: black; } /* Altere para a cor que você preferir */
+}
+
+/* Aplicar a animação de mudança de cor */
+nav ul li a {
+    transition: color 0.3s; /* Suaviza a transição de cor */
+}
+
+nav ul li a:hover {
+    animation-name: hover-color-change;
+    color: black; /* Garante que a cor final seja aplicada */
+}
+
+/* Estilos para a seção "Sobre nós" */
+.info-section {
+    background-color: #f8f9fa; /* Fundo da caixa */
+    padding: 20px;
+    border-radius: 10px; /* Borda arredondada da caixa */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para a caixa */
+}
+
+/* Estilos para a imagem na seção "Sobre nós" */
+.info-section .img-fluid {
+    border-radius: 50%; /* Borda arredondada da imagem */
+    border: 2px solid orange; /* Borda da imagem */
+    padding: 5px; /* Espaço entre a imagem e a borda */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Adiciona espaço abaixo da barra de pesquisa */
+}
+
+.search {
+    background-color: #fff; /* Fundo branco para a área de pesquisa */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #ffa500; /* Laranja suave para o botão de pesquisa */
+    color: #fff; /* Texto branco para o botão de pesquisa */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #ff8c00; /* Laranja mais forte ao passar o mouse sobre o botão */
+}
+
+h2 {
+    text-align: center;
+}
+
+/* CSS Anterior */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ffa500 !important; /* Laranja suave para as setas */
+    /* Ajuste o tamanho das setas */
+    width: 50px !important; 
+    height: 50px !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    /* Ajusta a posição das setas */
+    margin-top: -25px;
+}
+
+.banner-img {
+    /* Ajuste o tamanho das imagens */
+    width: 100%;
+    height: auto;
+    /* Ajuste o tamanho padrão das imagens */
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap; /* Adiciona flex-wrap para responsividade */
+}
+
+.card {
+    margin-right: 10px; /* Adiciona margem à direita de cada card */
+    margin-left: 20px; /* Adiciona margem à esquerda de cada card */
+    margin-bottom: 20px; /* Adiciona margem inferior entre os cards */
+    flex: 1 1 calc(33.333% - 30px); /* Responsivo: largura dos cards em telas maiores */
+    box-sizing: border-box; /* Inclui borda e padding no tamanho total do card */
+}
+
+.card-img-top {
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.card-title {
+    text-align: center; /* Centraliza o título */
+}
+
+.stars {
+    text-align: center; /* Centraliza as estrelas */
+}
+
+.star {
+    color: gold; /* Cor dourada para as estrelas */
+    font-size: 20px; /* Tamanho das estrelas */
+}
+
+.card-text {
+    text-align: center; /* Centraliza o texto da mensalidade */
+}
+
+.card a {
+    color: white;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #f0f0f0; /* Opcional: ajuste a cor do link ao passar o mouse */
+}
+
+/* Estilo para o popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 999;
+}
+
+/* Estilo para o botão de fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #ffa500;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 30px); /* Largura dos cards em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .card {
+        flex: 1 1 100%; /* Largura dos cards em telas pequenas */
+        margin: 10px 0; /* Reduz a margem entre os cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .search form {
+        flex-direction: column;
+    }
+
+    .search input[type="text"] {
+        margin: 0 0 10px 0; /* Margem abaixo do input */
+        width: 100%; /* Ocupa 100% da largura disponível */
+    }
+
+    .search button {
+        width: 100%; /* Ocupa 100% da largura disponível */
+    }
+}

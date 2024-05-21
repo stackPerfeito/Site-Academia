@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Cor de fundo do site */
+    margin-bottom: 100px; /* Adiciona espaço de margem inferior igual à altura do footer */
+}
+
+@keyframes hover-grow {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes hover-shrink {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+}
+
+@keyframes hover-fade-in {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+@keyframes hover-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0.7; }
+}
+
+header {
+    background-color: #ffa500; /* Laranja suave para o header */
+    color: #fff; /* Texto branco para o header */
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    border-radius: 30px;
+    max-height: 100px; /* Ajuste conforme necessário */
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    animation: hover-grow 0.3s forwards;
+}
+
+h1 {
+    text-align: center;
+    color: #fff; /* Texto branco para o título */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alteração para exibir o menu na horizontal */
+}
+
+nav ul li {
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item */
+}
+
+nav ul li a {
+    color: #fff; /* Texto branco para os links do menu */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: black;
+    animation: hover-fade-in 0.3s forwards;
+}
+
+/* Estilo para o container principal */
+.container-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 60px; /* Espaço extra para o rodapé fixo */
+}
+
+/* Estilo para o card dos detalhes da academia */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 500px; /* Define a largura máxima do card */
+    width: 100%; /* Faz o card ocupar todo o espaço disponível */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    animation: hover-grow 0.3s forwards;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a imagem da academia */
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo para o corpo do card */
+.card-body {
+    padding: 20px;
+}
+
+/* Estilo para o título do card */
+.card-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-align: center; /* Alinha o título no centro */
+}
+
+/* Estilo para o texto do card */
+.card-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Estilo para o texto de erro */
+.card p {
+    text-align: center;
+    color: black;
+    font-size: 1.2em;
+}
+
+/* Estilos adicionais para o popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    color: #555; /* Cor do texto */
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #999; /* Cor do botão de fechar */
+}
+
+.popup input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.popup a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff; /* Cor do link */
+    text-decoration: none;
+}
+
+.popup a:hover {
+    text-decoration: underline;
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container.show {
+    display: flex;
+    animation: hover-fade-in 0.3s forwards;
+}
+
+footer {
+    background-color: #ffa500;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+footer:hover {
+    background-color: #ff8c00;
+    animation: hover-fade-in 0.3s forwards;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 30px); /* Largura dos cards em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .card {
+        flex: 1 1 100%; /* Largura dos cards em telas pequenas */
+        margin: 10px 0; /* Reduz a margem entre os cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .search form {
+        flex-direction: column;
+    }
+
+    .search input[type="text"] {
+        margin: 0 0 10px 0; /* Margem abaixo do input */
+        width: 100%; /* Ocupa 100% da largura disponível */
+    }
+
+    .search button {
+        width: 100%; /* Ocupa 100% da largura disponível */
+    }
+}

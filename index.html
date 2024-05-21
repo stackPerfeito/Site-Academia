@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre Locais para Atividades Físicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="imagens/17504043-emblema-de-musculacao-e-modelo-de-de-design-de-logotipo-de-academia-vetor.jpg" alt="Logo">
+            </div>
+            <h1>Atividades Físicas</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#mapa">Locais</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+     <!-- Nova seção com imagem à esquerda e texto à direita -->
+     <section class="info-section py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="imagens/Boa vindas.webp" class="img-fluid" alt="Informativo">
+                </div>
+                <div class="col-md-8">
+                    <h2>Bem-vindo ao nosso site!</h2>
+                    <p>Este site foi criado para facilitar a sua busca por academias próximas a você. Aqui, você pode encontrar as melhores opções para praticar atividades físicas e aproveitar os descontos exclusivos em academias parceiras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <h2>Descontos em academias Parceiras</h2>
+
+    <div class="container mt-4">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagens/12705742.jpg" class="d-block w-100 banner-img" alt="Banner 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/1600w-OjI4_kjBiBU.webp" class="d-block w-100 banner-img" alt="Banner 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/11005102.jpg" class="d-block w-100 banner-img" alt="Banner 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="search">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Digite o endereço">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </div>
+    
+
+    <main>
+        <section id="mapa">
+            <div class="container">
+                <div class="row">
+                    <div class="card" data-address="Santo Amaro">
+                        <img src="imagens/Santo Amaro.jpg" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Santo Amaro</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 150,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=1">Saiba
+                                    Mais</a></button>
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31604.21000733143!2d-34.91662189456781!3d-8.047677806996079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab188df83e9483%3A0x2ba0094a5dce933f!2sSanto%20Amaro%2C%20Recife%20-%20PE!5e0!3m2!1spt-BR!2sbr!4v1716156287452!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="card" data-address="Recife">
+                        <img src="imagens/Recife.jpg" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Recife</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 130,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=2">Saiba
+                                    Mais</a></button>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126418.20443030934!2d-35.01661897943269!3d-8.04330299056202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab196f94e5408b%3A0xe5800ef782bde3a6!2sRecife%2C%20PE!5e0!3m2!1spt-BR!2sbr!4v1716156543329!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="card" data-address="Life">
+                        <img src="imagens/Life.jpeg" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Life</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 150,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=3">Saiba
+                                Mais</a></button>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.6141699507593!2d-34.90478280000001!3d-8.0386543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18fb15555555%3A0x8bdbd62a510bb4fe!2sAcademia%20Life!5e0!3m2!1spt-BR!2sbr!4v1716156839800!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="card" data-address="Vox">
+                        <img src="imagens/Vox.jpeg" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Vox</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 150,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=4">Saiba
+                                Mais</a></button>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.8584044495997!2d-34.8889497!3d-8.0135345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab183c123d9eb3%3A0xa8a5aca4890c5a92!2sVo2%20Max%20Academia%20Recife!5e0!3m2!1spt-BR!2sbr!4v1716157014656!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="card" data-address="Torre">
+                        <img src="imagens/Torre.jpg" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Torre</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 150,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=5">Saiba
+                                Mais</a></button>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.537552891139!2d-34.913927199999996!3d-8.0465184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab195233ba6df1%3A0xb32b8b5a9c51e24d!2sAcademia%20Recife%20-%20P%C3%B3lo%20Torre!5e0!3m2!1spt-BR!2sbr!4v1716157176324!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="card" data-address="Havana">
+                        <img src="imagens/Havana.jpg" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Havana</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 150,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=6">Saiba
+                                Mais</a></button>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5102389689996!2d-34.8784959!3d-8.0493201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1893d69adb3d%3A0x20b41d1512f2ad7a!2sAcademia%20Havana!5e0!3m2!1spt-BR!2sbr!4v1716157274440!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="card" data-address="Aguá Fria">
+                        <img src="imagens/Agua Fria.jpg" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Aguá Fria</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 150,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=7">Saiba
+                                Mais</a></button>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.89876825218!2d-34.8889005!3d-8.0093755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab197062ba0843%3A0xd63697c860af4d77!2sAcademia%20Recife%20-%20P%C3%B3lo%20%C3%81gua%20Fria!5e0!3m2!1spt-BR!2sbr!4v1716157365540!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="card" data-address="Fitner">
+                        <img src="imagens/Fither.jpg" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Fitner</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 150,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=8">Saiba
+                                Mais</a></button>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.4988161278134!2d-34.89492209999999!3d-8.050491499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1973002762f3%3A0x56ddfc92ef45e849!2sActiva%20Fitner!5e0!3m2!1spt-BR!2sbr!4v1716157806738!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="card" data-address="Smart Fit">
+                        <img src="imagens/Smart.png" class="card-img-top" alt="Academia 1" height="150">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Smart Fit</h5>
+                            <div class="stars">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="card-text text-center">R$ 150,00/mês</p>
+                            <button class="btn btn-primary btn-block"><a href="detalhes.html?id=9">Saiba
+                                Mais</a></button>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126421.46618654247!2d-35.05471715664059!3d-8.032834900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19d70b5b59eb%3A0x85c1c74a063f9628!2sAcademia%20Smart%20Fit%20-%20Desembargador%20G%C3%B3is%20Cavalcante!5e0!3m2!1spt-BR!2sbr!4v1716158252565!5m2!1spt-BR!2sbr"
+                                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                    </div>
+                    <!-- Adicione mais cards conforme necessário -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="errorPopup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p id="errorMessage">Nenhum local encontrado com esse endereço.</p>
+    </div>
+    
+
+
+    <footer id="contato">
+        <p>&copy; 2024 SeuNome. Todos os direitos reservados.</p>
+    </footer>
+
+
+
+
+    <script src="scripts.js"></script>
+    <!-- Adicione o Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
